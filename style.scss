@@ -1,0 +1,138 @@
+body{
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+h1,h3,h3,h4,h5{
+    margin: 0;
+    padding: 10px 0;
+    line-height: 120%;
+}
+p{
+    margin: 0;
+    padding: 10px 0;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.ai-center{
+    align-items: center;
+}
+.jc-spacebetween{
+    justify-content: space-between;
+}
+.img-responsive{
+    width: 90%;
+    padding: 10% 0;
+}
+.img-responsive-alt{
+    width: 100%;
+    padding: 10% 0;
+}
+@for $i from 1 through 12{
+    .col#{$i}{
+        width: (100%/(12/$i)) - 3%;
+        margin: 1,5%;
+    }
+}
+
+//nav
+
+.nav{
+    &-logo{
+        h1{
+            a{
+                text-decoration: none;
+                color: rgb(252, 251, 251);
+            }
+        }
+        margin: 1,5%;
+    }
+    &-menu{
+        ul{
+            list-style: none;
+            display: flex;
+            li{
+                a{
+                    display: inline-block;
+                    padding: 10px;
+                    text-decoration: none;
+                    color: rgb(250, 248, 248);
+                }
+            }
+        }
+        margin: 1,5%;
+    }
+}
+
+//hero
+.hero{
+background: url(https://images.unsplash.com/photo-1553051021-9f94520a6cad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+height: 600px;
+background-attachment: fixed;
+background-size: 100%;
+}
+
+.description{
+    padding: 5% 0;
+    &-item{
+        h2{
+            font-size: 2em;
+            color: white;
+            line-height: 120%;
+            letter-spacing: -1px;
+            margin: 5px 0;
+        }
+        p{
+            font-size: 20px;
+            color: white;
+            line-height: 180%;
+            letter-spacing: -1px;
+        }
+    }
+}
+//content
+.content{
+    padding: 5% 0;
+    &-item{
+        padding: 10% 0;
+        h3{
+            font-size: 2em;
+        }
+    }
+}
+
+//product
+.product{
+    padding: 5% 0;
+    background-color: rgb(176, 185, 182);
+    &-item{
+        box-shadow: 1px 1px 10px 1px rgb(199, 228, 218);
+        margin: 5px 5px 5px 5px;
+        .pi-detail{
+            background-color: white;
+            padding: 20px 20px;
+            h4{margin: 0; padding: 0;}
+            p{margin: 0; padding: 0;}
+        }
+    }
+}
+//contact
+.contact{
+    position: fixed;
+    bottom: 30px;
+    text-align: center;
+    right: 40px;
+    .text{
+        background-color: white;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+}
